@@ -1,9 +1,9 @@
 <?php
-$host = "localhost";
+$host = "10.10.127.2";
 $port = "5432";
-$dbname = "postgres";
-$user = "postgres";
-$password = "12345";
+$dbname = "uc3g";
+$user = "uc3g";
+$password = "7A?Tk:fJV>(M9+KD";
 
 try {
 
@@ -15,11 +15,7 @@ try {
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "
-        SELECT *
-        FROM curso
-        ORDER BY registro_fecha DESC
-    ";
+    $sql = "SELECT * FROM public.curso ORDER BY registro_fecha DESC";
 
     $stmt = $pdo->query($sql);
 
